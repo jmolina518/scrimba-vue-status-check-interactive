@@ -26,35 +26,34 @@
 
   <div class="text-xl mt-4">
    <button v-if="! status == 0" @click.prevent="decrement" class="px-3 border rounded">-</button>
-   <button @click.prevent="increment" class="px-3 border rounded">+</button>
+   <button v-if="status < 10 " @click.prevent="increment" class="px-3 border rounded">+</button>
+
   </div>
 
- </div>
-
- <script>
-  var app = new Vue({
-   el: '#app',
-   data: {
-    status: 0,
-   },
-   methods: {
-    increment: function () {
-     if (this.status >= 10) {
-      return;
-     }
-
-     this.status++;
+  <script>
+   var app = new Vue({
+    el: '#app',
+    data: {
+     status: 0,
     },
-    decrement: function () {
-     if (this.status <= 0) {
-      return;
-     }
+    methods: {
+     increment: function () {
+      if (this.status >= 10) {
+       return;
+      }
 
-     this.status--;
+      this.status++;
+     },
+     decrement: function () {
+      if (this.status <= 0) {
+       return;
+      }
+
+      this.status--;
+     }
     }
-   }
-  });
- </script>
+   });
+  </script>
 </body>
 
 </html>
