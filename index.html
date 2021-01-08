@@ -10,7 +10,7 @@
  <div id="app" class="bg-blue-300 h-screen w-full flex flex-col justify-center items-center text-sm relative">
 
   <p class="text-xs mb-8">0-5 = GOOD; 6-8 = WARNING; 9-10 = DANGER</p>
-  <p>Current Status: ?</p>
+  <p>Current Status: {{status}}</p>
 
   <div class="w-32 bg-green-200 text-center py-2">
    GOOD
@@ -35,7 +35,7 @@
   var app = new Vue({
    el: '#app',
    data: {
-
+    status: 0,
    }
   });
  </script>
