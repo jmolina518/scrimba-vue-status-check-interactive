@@ -39,9 +39,17 @@
    },
    methods: {
     increment: function () {
+     if (this.status >= 10) {
+      return;
+     }
+
      this.status++;
     },
     decrement: function () {
+     if (this.status <= 0) {
+      return;
+     }
+
      this.status--;
     }
    }
