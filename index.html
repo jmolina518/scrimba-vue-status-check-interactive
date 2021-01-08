@@ -12,7 +12,7 @@
   <p class="text-xs mb-8">0-5 = GOOD; 6-8 = WARNING; 9-10 = DANGER</p>
   <p>Current Status: {{ status }}</p>
 
-  <div class="w-32 bg-green-200 text-center py-2">
+  <div v-if="status > 0 && status <= 5" class="w-32 bg-green-200 text-center py-2">
    GOOD
   </div>
 
